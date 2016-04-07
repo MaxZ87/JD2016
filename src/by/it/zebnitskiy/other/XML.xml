@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE fitnessclub [
+        <!ELEMENT fitnessclub (fitness, pool)+>
+        <!ELEMENT fitness (fit)+ >
+        <!ELEMENT fit  (namef, training, exercises, telefone, address)>
+        <!ATTLIST fit
+                        bodybuilding ID #REQUIRED
+                         load CDATA #REQUIRED
+                        >
+        <!ELEMENT namef (#PCDATA)>
+        <!ELEMENT training (#PCDATA)>
+        <!ELEMENT exercises (latissimus, delta, triceps)>
+        <!ELEMENT latissimus (#PCDATA)>
+        <!ELEMENT delta (#PCDATA)>
+        <!ELEMENT triceps (#PCDATA)>
+        <!ELEMENT telefone (#PCDATA)>
+        <!ELEMENT address (city, street)>
+        <!ELEMENT city (#PCDATA)>
+        <!ELEMENT street (#PCDATA)>
+
+        ]>
+        <fitnessclub>
+    <fitness>
+        <fit  bodybuilding ="tightening" load="trank">
+        <namef>MaxPower</namef>
+       <training >hands</training>
+        <exercises>
+         <latissimus>tightening</latissimus>
+            <delta>rubber</delta>
+            <triceps>Dips</triceps>
+        </exercises>
+        <telefone>80285432819</telefone>
+        <address>
+            <city>Minsk</city>
+            <street>Nezavisimosty</street>
+                </address>
+        </fit>
+    </fitness>
+
+
+</fitnessclub>

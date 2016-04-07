@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE kurss SYSTEM  "2DTD.dtd">
+<kurss>
+    <kurs unit = "dol"  course = 'Minsk'>
+        <exchange>MMB</exchange>
+        <telephone>80445501413</telephone>
+        <address>
+            <city>Minsk</city>
+            <street>Nezavicimosty</street>
+        </address>
+    </kurs>
+
+    <kurs unit = "Eur" course = 'Minsk'>
+        <exchange>VTB</exchange>
+        <telephon>80297587417</telephon>
+        <address>
+            <city>Borisov</city>
+            <street>Olyshevskogo</street>
+        </address>
+    </kurs>
+
+    <kurs unit = "Rub" course = 'Minsk'>
+        <exchange> VAB</exchange>
+        <telephon>80175412358</telephon>
+        <address>
+            <city>Brest</city>
+            <street>Utochka</street>
+        </address>
+    </kurs>
+</kurss>
