@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!ELEMENT kurss (kurs) +>
+        <!ELEMENT kurs (exchange, telephon, address)>
+        <!ATTLIST kurs
+                unit ID #REQUIRED
+                course CDATA  #REQUIRED
+                >
+        <!ELEMENT exchange ( #PCDATA)>
+        <!ELEMENT telephon (#PCDATA)>
+        <!ELEMENT address (city, street)>
+        <!ELEMENT city (#PCDATA)>
+        <!ELEMENT street (#PCDATA)>
+

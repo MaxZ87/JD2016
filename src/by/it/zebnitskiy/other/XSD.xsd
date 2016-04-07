@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.it-academy.by/xml.XML"
+        xmlns:tns="http://www.it-academy.by/xml.XML"
+        elementFormDefault="qualified">
+<element name="fitnessclub">
+    <complexType>
+        <sequence>
+            <element name="fitness"
+                     type="tns:Fitness"
+                     minOccurs="1"
+                     maxOccurs="unbounded"/>
+</sequence>
+    </complexType>
+</element>
+    <complexType name="Fitness">
+        <sequence>
+            <element name="namef" type="string" />
+            <element name="training" type="string" />
+            <element name="exercises" type="tns:Exercises" />
+            <element name="telefone" type="positiveInteger" />
+            <element name="address" type="tns:Address" />
+                         </sequence>
+        <attribute name="bodybuilding" type="tns:Bodybuilding" use="required" /> >
+        <attribute name="load" use="optional" default="trank" >
+            <simpleType>
+                <restriction base="string">
+                    <enumeration value="trank"/>
+                    <enumeration value="tranknn"/>
+                    <enumeration value="trankzzzz"/>
+                </restriction>
+            </simpleType>
+           </attribute>
+    </complexType>
+    <simpleType name="Bodybuilding">
+        <restriction base="ID">
+            <pattern value="[a-zA-Z1-9]+"/>
+        </restriction>
+    </simpleType>
+
+    <complexType name="Fit">
+                <sequence>
+                    <element name="namef"
+                             type="string"
+                             minOccurs="1"
+                             maxOccurs="1"/>
+                    <element name="training"
+                             type="string"
+                             minOccurs="1"
+                             maxOccurs="1"/>
+                    <element name="exercises"
+                             type="tns:Exercises"
+                             minOccurs="1"
+                             maxOccurs="unbounded"/>
+                    <element name="telefone"
+                             type="integer"
+                             minOccurs="1"
+                             maxOccurs="1"/>
+                    <element name="address"
+                             type="tns:Address"
+                             minOccurs="1"
+                             maxOccurs="1"/>
+                                    </sequence>
+    </complexType>
+    <complexType name="Exercises">
+        <sequence>
+            <element name="latissimus"
+                     type="string"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+            <element name="delta"
+                     type="string"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+            <element name="triceps"
+                     type="string"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+        </sequence>
+    </complexType>
+    <complexType name="Address">
+                <sequence>
+                    <element name="city"
+                             type="string"
+                             minOccurs="1"
+                             maxOccurs="1"/>
+                    <element name="street"
+                             type="string"
+                             minOccurs="1"
+                             maxOccurs="1"/>
+                </sequence>
+    </complexType>
+
+</schema>

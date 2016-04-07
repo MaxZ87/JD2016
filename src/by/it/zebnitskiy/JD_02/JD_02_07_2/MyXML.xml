@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE notebook SYSTEM "MyDTD.dtd">
+<notebook>
+    <person>
+        <name first="Vasy" second="Sidorov" surname="Pupkin" />
+        <birthday>24.01.2000</birthday>
+        <address>
+            <street>Nezavisimosti, 111</street>
+            <city>Magadan</city>
+        </address>
+        <phone>
+            <work>8341234534</work>
+            <home>8912344457</home>
+        </phone>
+    </person>
+    <person>
+        <name first="Any" second="Gady" surname="Hrenova"/>
+        <birthday>11.12.2001</birthday>
+        <address>
+            <street>Kustovaya, 34</street>
+            <city>Bangladesh</city>
+        </address>
+        <phone>
+            <home>123009384</home>
+            <work>001923483</work>
+        </phone>
+    </person>
+</notebook>

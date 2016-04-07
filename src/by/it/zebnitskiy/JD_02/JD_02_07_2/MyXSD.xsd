@@ -1,0 +1,53 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+               targetNamespace="http://www.it-academy.by/xml.MyXML"
+                xmlns:tns="http://www.it-academy.by/xml.MyXML"
+                elementFormDefault="qualified">
+        <element name="notebook" type="tns:notebookType"/>
+        <complexType name="notebookType">
+   <sequence>
+             <element name="person" type="tns:personType"
+               minOccurs="1"
+               maxOccurs="unbounded"/>
+       </sequence>
+    </complexType>
+            <complexType name="personType">
+        <sequence>
+                <element name="name">
+                    <complexType>
+                      <attribute name="first" type="string" use="optional" />
+   <attribute name="second" type="string" use="optional" />
+                        <attribute name="surname" type="string" use="optional" />
+                    </complexType>
+                </element>
+                <element name="birthday" type="tns:ruDate" minOccurs="1"  />
+                <element name="address" type="tns:addressType" minOccurs="1" maxOccurs="unbounded" />
+                <element name="phone" type="tns:phoneType" minOccurs="0" maxOccurs="unbounded" />
+            </sequence>
+            </complexType>
+           <complexType name="addressType">
+        <sequence>
+                <element name="street" type="string"/>
+                <element name="city" type="string" />
+            </sequence>
+    </complexType>
+        +<simpleType name="placeType">
+    <restriction base="string">
+                     <enumeration value="город"/>
+        <enumeration value="поселок" />
+        <enumeration value="деревня" />
+        </restriction>
+</simpleType>
+            <complexType name="phoneType">
+        <sequence>
+        <element name="work" type="integer" minOccurs="1"
+            maxOccurs="unbounded"/>
+            <element name="home" type="integer" minOccurs="1"
+                     maxOccurs="unbounded" />
+           </sequence>
+  </complexType>
+            <simpleType name="ruDate">
+        <restriction base="string">
+                <pattern value="[0-9]{2}.[0-9]{2}.[0-9]{4}" />
+            </restriction>
+            </simpleType>
+</schema>

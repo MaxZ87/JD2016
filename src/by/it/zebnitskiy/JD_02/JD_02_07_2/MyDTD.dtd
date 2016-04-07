@@ -1,0 +1,15 @@
++<?xml version="1.0" encoding="UTF-8" ?>
+        <!ELEMENT notebook (person)* >
+        <!ELEMENT  person (name, birthday, address, phone) >
+        <!ELEMENT name EMPTY >
+        <!ATTLIST  name
+                first  CDATA #IMPLIED
+                second CDATA #IMPLIED
+                surname CDATA #REQUIRED >
+        <!ELEMENT  birthday (#PCDATA) >
+        <!ELEMENT address (street, city) >
+        <!ELEMENT street (#PCDATA) >
+        <!ELEMENT city (#PCDATA)>
+        <!ELEMENT  phone (work, home) >
+        <!ELEMENT work (#PCDATA)>
+        <!ELEMENT home (#PCDATA)>

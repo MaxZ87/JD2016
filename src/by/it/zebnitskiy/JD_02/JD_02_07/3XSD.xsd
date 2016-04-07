@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.org/NewXMLSchema"
+        xmlns:tns="http://www.example.org/NewXMLSchema"
+        elementFormDefault="qualified">
+    <element name="kurss">
+        <complexType>
+            <sequence>
+                <element name="kurs"
+                         type="tns:Kurs"
+                         minOccurs="1"
+                         maxOccurs="unbounded" />
+            </sequence>
+        </complexType>
+    </element>
+    <complexType name="Kurs">
+        <sequence>
+            <element name="exchange" type="string" />
+            <element name="telephon" type="positiveInteger" />
+            <element name="address" type="tns:Address" />
+        </sequence>
+        <attribute name="unit" type="tns:Unit" use="required" />
+        <attribute name="course" type="optional" use="Minsk" >
+            <simpleType>
+                <restriction base="string">
+                    <enumeration value="Brest" />
+                    <enumeration value="Minsk" />
+                    <enumeration value="Grodno" />
+                </restriction>
+            </simpleType>
+        </attribute>
+    </complexType>
+    <simpleType name="Unit">
+        <restriction base="ID">
+            <pattern value="([a-zA-Z])[a-zA-Z0-9]{1,19}" />
+        </restriction>
+    </simpleType>
+    <complexType name="Address">
+        <sequence>
+            <element name="city" type="string" />
+            <element name="street" type="string" />
+        </sequence>
+    </complexType>
+</schema>
